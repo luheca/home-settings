@@ -1,0 +1,5 @@
+{
+  "psFormat": "table {{.ID}}\\t{{.Command}}\\t{{.Status}}\\t{{.Ports}}\\t{{.Names}}",
+  "imagesFormat": "table {{.Repository}}\\t{{.Tag}}\\t{{.ID}}",
+  "statsFormat": "table {{.Container}}\\t{{.Name}}\\t{{.CPUPerc}}\\t{{.MemPerc}}\\t{{.MemUsage}}"
+}
