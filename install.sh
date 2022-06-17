@@ -28,7 +28,7 @@ function echo_create_dirs(){
 # Echo commands to update files.
 # If $1 is provided (a non-zero length string), will assume source was copied into $tmp_hs
 function echo_update_files(){
-    ## Ignore this repository's .hg, .hgignore, .git, .gitignore, install and diff scripts, and *.swp
+    # Ignore this repository's .hg, .hgignore, .git, .gitignore, install and diff scripts, and *.swp
     for f in `find $self_dir -path "$self_dir/.*" -prune -o -path "$self_dir/install.sh" -prune -o -path "$self_dir/diff.sh" -prune -o -type f \
       -a ! -name "*.swp" -a ! -name "*.Darwin" -a ! -name "*.Linux" -print`
     do
@@ -43,9 +43,9 @@ function echo_update_files(){
 
         if [ -n "$1" ]
         then
-            echo "cp -v -b $tmp_hs/$f ~/$dot;"
+            echo "cp -v $tmp_hs/$f ~/$dot;"
         else
-            echo "cp -v -b $src_dot ~/$dot;"
+            echo "cp -v $src_dot ~/$dot;"
         fi
     done
 }

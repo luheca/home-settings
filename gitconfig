@@ -1,0 +1,9 @@
+[user]
+    name = Luis Herrera
+    email = hc.luis@gmail.com
+[color]
+    ui = auto
+[core]
+    excludesfile = ~/.gitignore
+[commit]
+    template = ~/.gitmessage

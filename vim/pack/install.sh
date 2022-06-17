@@ -13,7 +13,7 @@ git clone https://github.com/vim-airline/vim-airline-themes
 git clone https://github.com/vim-ruby/vim-ruby
 git clone https://github.com/vim-syntastic/syntastic
 git clone https://github.com/psf/black
-git -C black checkout 19.10b0
+#git -C black checkout 19.10b0
 git clone https://github.com/ycm-core/YouCompleteMe
 
 git clone https://github.com/airblade/vim-gitgutter

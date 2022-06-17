@@ -34,8 +34,15 @@ function bash_prompt() {
   local COLOR_USER=$NO_COLOR
 
   case $TERM in
+      # This appears to be for Window title:
+      # '\[\033]0;<WINDOW_TITLE>\007\]'
+      # And this for another `title' that GNU Screen can use for its windows:
+      # '\[\033k<GNU SCREEN WINDOW TITLE>\033\\\]'
       xterm*|rxvt*)
           TITLEBAR='\[\033]0;\u@\h:\w\007\]'
+          ;;
+      screen*)
+          TITLEBAR='\[\033k\u@\h\033\\\]'
           ;;
       *)
           TITLEBAR=""
